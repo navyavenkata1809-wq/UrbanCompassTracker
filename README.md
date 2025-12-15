@@ -1,5 +1,4 @@
-# Location Tracker & Heat Map (MAUI)
-
+# UrbanCompassTracker
 A .NET MAUI application that tracks the user's geolocation, stores the coordinates in a local SQLite database, and visualizes the path history as a heat map overlay.
 
 ## Features

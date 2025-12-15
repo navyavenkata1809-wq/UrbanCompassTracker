@@ -24,3 +24,12 @@ A .NET MAUI application that tracks the user's geolocation, stores the coordinat
 1. Grant Location permissions when prompted.
 2. Click **Start Tracking** to begin recording coordinates.
 3. Click **Visualize Heat Map** to load data from the database and render the path on the map.
+
+### MANIFEST SETTINGS (AndroidManifest.xml)
+
+Ensure these exist in the Platforms/Android/AndroidManifest.xml:
+    
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+___

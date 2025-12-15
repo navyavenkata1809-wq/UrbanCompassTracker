@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+             x:Class="GeoTracker.HomeView"
+             Title="MainView"
+             BackgroundColor="White">
+
+    <!-- Using a simpler Grid structure than the other student -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <maps:Map x:Name="UserMap" 
+                  Grid.Row="0" 
+                  IsShowingUser="True" 
+                  MapType="Street" />
+
+        <StackLayout Grid.Row="1" Padding="15" BackgroundColor="#F0F0F0" Spacing="10">
+            <Label x:Name="InfoLabel" 
+                   Text="System Standby" 
+                   HorizontalTextAlignment="Center" 
+                   TextColor="#333" />
+
+            <Grid ColumnDefinitions="*,*">
+                <Button Text="TRACK LOCATION" 
+                        Clicked="TrackButton_Clicked" 
+                        BackgroundColor="#512BD4"
+                        TextColor="White"
+                        CornerRadius="5"
+                        Margin="5" />
+
+                <Button Text="VISUALIZE DATA" 
+                        Clicked="HeatmapButton_Clicked" 
+                        BackgroundColor="#6200EE"
+                        TextColor="White"
+                        CornerRadius="5"
+                        Margin="5"
+                        Grid.Column="1" />
+            </Grid>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
